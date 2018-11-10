@@ -7,11 +7,11 @@ from textblob import TextBlob
 
 def Tweep():
 
-	consumer_key = '7hYpJLu2mDoUZmZpt8vfI989y'
-	consumer_secret = 'uzHxOIId6H2k6R14qg7t5D8XvLhjpj8fj6jhWBK1CmrEAEKsPZ'
+	consumer_key = 'YOUR CONSUMER KEY'
+	consumer_secret = 'YOUR SECRET KEY'
 
-	access_token = '3253529420-XREr7zGSLED4qiXD9dyfTZxFAKnxtKRIloX6omY'
-	access_token_secret = 'zfBVOsg4lllJ7gMu9pcmfyiLJnWMQiGsPb9mmbb3y3ePZ'
+	access_token = 'YOUR ACCESS TOKEN'
+	access_token_secret = 'ACCESS TOKEN SECRET'
 
 	auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 	auth.set_access_token(access_token, access_token_secret)
