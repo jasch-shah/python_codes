@@ -1,33 +1,39 @@
-from __future__ import division
-import pandas as pd 
-import numpy as np 
-import matplotlib.pyplot as plt 
-import math
+'''import pandas as pd
+from sklearn import linear_model
+import matplotlib.pyplot as plt
 
-df = pd.read_csv('ex1data1.txt', header = None, names = ['x','y'])
-x = np.array(df.x)
-y = np.array(df.y)
-theta = np.zeros((2,1))
+#read data
 
-#scatterplot of data with option to save figure.
-def scatterPlot(x,y,yp=None,savePng=False):
-	plt.xlabel('Population of City in 10,000s')
-	plt.ylabel('Profit in $10,000s')
-	plt.scatter(x, y, marker='x')
-	if yp != None:
-		plt.plot(x,yp)
-	if savePng==false:
-		plt.show()
-	else:
-		name = raw_input('Name Figure File: ')
-		plt.savefig(name+'.png')
+dataframe = pd.read_fwf('brain_body.txt')
+x_values = dataframe[['Brain']]
+y_values = dataframe[['Body']]
+
+#train model on data
+
+body_reg = linear_model.LinearRegression()
+body_reg.fit(x_values, y_values)
 
 
-scatterPlot(x,y)
+#visualize the results
 
-#linear regression implementation using libraries
-(m,b) = np.polyfit(x,y,1)
-print 'Slope is ' + str(m)
-print 'Y intercept is ' + str(b)
-yp = np.polyval([m,b],x)
-scatterPlot(x,y,yp)
+plt.scatter(x_values, y_values)
+plt.plot(x_values, body_reg.predict(x_values))
+plt.show()'''
+
+import pandas as pd
+from sklearn import linear_model
+import matplotlib.pyplot as plt
+
+#read data
+dataframe = pd.read_fwf('brain_body.txt')
+x_values = dataframe[['Brain']]
+y_values = dataframe[['Body']]
+
+#train model on data
+body_reg = linear_model.LinearRegression()
+body_reg.fit(x_values, y_values)
+
+#visualize results
+plt.scatter(x_values, y_values)
+plt.plot(x_values, body_reg.predict(x_values))
+plt.show()
