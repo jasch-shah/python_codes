@@ -1,0 +1,1 @@
+print 'In Time You will know what its like to loose..Feeling so desperate that u are right that defer all the same..Dread it ..Run from it..Destiny still arrives..'
