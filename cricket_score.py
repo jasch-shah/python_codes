@@ -1,22 +1,20 @@
-import bs4 as bs
-from urllib2 import Request
-from  win10toast import ToastNotifier
+import bs4
+from bs4 import BeautifulSoup as soup
+from urllib2 import urlopen as uReq
 
-toaster = ToastNotifier()
-
-url = "http://www.cricbuzz.com/cricket-match/live-scores"
-
-sauce = request.urlopen(url).read()
-soup = bs.BeautifulSoup(sauce,"lxml")
-#print(soup)
-score = []
-results = []
-#for live_matches in soup.find_all('div',attrs={"class":"cb-mtch-lst cb-col cb-col-100 cb-tms-itm"}):
-for div_tags in soup.find_all('div', attrs={"class": "cb-lv-scrs-col text-black"}):
-        score.append(div_tags.text)
-for result in soup.find_all('div', attrs={"class": "cb-lv-scrs-col cb-text-complete"}):
-          results.append(result.text)
+my_url = "http://www.cricbuzz.com/"
+Client = uReq(my_url)
 
 
-print(score[0],results[0])
-toaster.show_toast(title=score[0],msg=results[0])
+html_page = Client.read()
+Client.close()
+
+soup_page = soup(html_page, "html.parser")
+
+score_box = soup_page.findAll("div", {"class":"cb-col cb-col-25 cb-mtch-blk"})
+score_box_len = len(score_box)
+print(score_box_len)
+for i in range(score_box_len):
+	   print(score_box[i].a["title"])
+	   print(score_box[i].a.text)
+	   print()
