@@ -27,8 +27,8 @@ while True:
 
   message = (sname + ' There will be NO training tonight on the ' + tdate + ' Sorry for the late notice, I have sent a mail as well, just trying to reach everyone, please do not reply to this message as this is automated')
 
-  username = 'Jash Shah'
-  sender = 'jash.shah20@gmail.com'
+  username = 'Tony Stark'
+  sender = 'tony.starkfsfdf@gmail.com'
 
   hash = 'YOUR HASH YOU GET FROM YOUR ACCOUNT'
 
@@ -103,8 +103,8 @@ while True:
 
 	message = (sname + ' There will be no training tonight on  the '+ tdate+ ' Sorry for late notice ,I have sent a mail as well ,just trying to reach everyone,please do not reply to this message.It is auto-generated')
 
-	username = 'Jash Shah'
-	sender = 'jash.shah20@gmail.com'
+	username = 'YOUR NAME'
+	sender = 'YOUR MAIL ID'
 
 	hash = 'YOUR HASH YOU GET FROM YOUR ACCOUNT'
 
