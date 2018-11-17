@@ -1,0 +1,5 @@
+Unnamed,car_per_cap,country,driver_rights
+US,AUS,JAP,IN,RU,MOR,EG
+809,731,588,18,200,70,45
+United States,Australia,Japan,India,Russia,Morocco,Egypt
+True,False,False,False,True,True,True
