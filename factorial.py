@@ -1,12 +1,11 @@
-def factorial(number):
-	if number < 0:
-		print('Invalid entry ! Cannot find factorial of negative number')
-	if number == 0 or number == 1:
-		return 1
-	else:
-		return number * factorial(number - 1)
+num = input()
+factorial = 1
 
-	
-if __name__ == '__main__':
-	userInput = int(input('Enter number to find the factorial of :'))
-	print(factorial(userInput))				
+if num < 0:
+	print("Sorry, factorial does not exist for negative numbers..")
+elif num == 0:
+	print("factorial of 0 is 1")
+else:
+	for i in range(1, num + 1):
+		factorial = factorial*i
+	print("Factorial of {} is {}",num,"is ",factorial)			
